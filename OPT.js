@@ -20,8 +20,7 @@ exports.run = function(data,frames){
   data = next(data);
   var queue = new Array();
   var page_faults = 0;
-  if (frames == 0) return 0;
-
+  if (frames == 0) return data.length;
   for (var i = 0; i < frames; i++) {
     queue.push(['',data.length+1]);
   };
